@@ -63,25 +63,10 @@ blockquote {
 
 /* Code */
 
-pre, code {
-  font-size: .9em;
-}
-
 pre code {
   display: block;
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
   padding: 1em;
   overflow-x: auto;
-  line-height: 1.75;
-}
-
-code {
-  background: #f9f9f9;
-}
-
-pre code {
-  background: none;
 }
 
 /* Lists */
