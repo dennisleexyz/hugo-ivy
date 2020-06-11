@@ -100,15 +100,7 @@ li {
 a {
   color: black;
   text-decoration: none;
-  padding-bottom: 2px;
   border-bottom: 1px solid;
-}
-
-a:hover {
-}
-
-sup a {
-  border-bottom: none;
 }
 
 /* Miscellanea */
@@ -174,32 +166,18 @@ body {
   line-height: 58px;
 }
 
-.masthead h1 a {
-  border-bottom: none;
-}
-
 .masthead .tagline {
   font-style: italic;
   text-align: right;
 }
 
 .masthead .menu {
-  margin-right: 20px;
   direction: rtl;
 }
 
 .masthead .menu a {
-  direction: ltr;
-}
-
-.masthead .menu ul ul {
-  list-style: none;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.masthead .menu li li::before {
-  content: "•\00a\000a0\00a0"
+  text-align: right;
+  display: table;
 }
 
 /* Main */
@@ -289,7 +267,7 @@ thead, tfoot, tr:nth-child(even) {
   .masthead {
     width: auto;
     float: none;
-    padding: 20px 0 60px;
+    padding: 20px 0;
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
@@ -314,99 +292,10 @@ thead, tfoot, tr:nth-child(even) {
 
   .masthead .menu {
     direction: ltr;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .masthead .menu ul {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-  }
-
-  .masthead .menu ul ul {
-    margin: 0;
-  }
-
-  .masthead .menu li {
-    border-bottom: 1px solid;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .masthead .menu li:first-child {
-    border-top: 1px solid;
-  }
-
-  .masthead .menu li li:last-child {
-    border-bottom: none;
   }
 
   .masthead .menu a {
-    display: block;
-    padding: 15px 20px;
-    border-bottom: none;
-  }
-
-  .masthead .menu li li a {
-    padding-left: 30px;
-  }
-
-  .masthead .menu li li::before {
-    content: none;
-  }
-
-  .masthead .menu li li a::before {
-    content: "•\00a0\00a0\00a0";
-  }
-
-  #menu-label {
     display: inline-block;
-    padding: 0 20px;
-    height: 50px;
-    border: 1px solid;
-    cursor: pointer;
-    line-height: 50px;
-    color: #333;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-
-  #menu-label:hover, #menu-label:focus {
-    border: 1px solid #888;
-  }
-
-  #menu-label .icon {
-    padding-right: 8px;
-    width: 30px;
-  }
-
-  #menu-check ~ label .close-icon {
-    display: none;
-  }
-
-  #menu-check ~ label .open-icon {
-    display: inline-block;
-  }
-
-  #menu-check:checked ~ label .close-icon {
-    display: inline-block;
-  }
-
-  #menu-check:checked ~ label .open-icon {
-    display: none;
-  }
-
-  #menu-check ~ ul {
-    display: none;
-  }
-
-  #menu-check:checked ~ ul {
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 0;
   }
 }
 
