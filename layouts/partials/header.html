@@ -53,7 +53,9 @@
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
     <header class="masthead">
       {{ partial "tagline.html" . }}
+      <hr>
       {{ partial "menu.html" . }}
+      <hr>
     </header>
 
     <article class="main">
