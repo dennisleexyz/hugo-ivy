@@ -290,9 +290,18 @@ thead, tfoot, tr:nth-child(even) {
     width: auto;
     float: none;
     padding: 20px 0 60px;
+    text-align: center;
     margin-left: 10px;
     margin-right: 10px;
     border-bottom: 3px solid black;
+  }
+
+  .masthead h1 {
+    text-align: center;
+  }
+
+  .masthead .tagline {
+    text-align: center;
   }
 
   .main {
