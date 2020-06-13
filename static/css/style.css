@@ -90,6 +90,10 @@ a {
   border-bottom: 1px solid;
 }
 
+sup a {
+  border-bottom: none;
+}
+
 /* Miscellanea */
 
 hr {
