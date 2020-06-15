@@ -279,6 +279,10 @@ thead, tfoot, tr:nth-child(even) {
     min-height: auto;
   }
 
+  .masthead .menu {
+     direction: ltr;
+   }
+
   .masthead .menu a {
     display: inline-block;
   }
