@@ -1,7 +1,7 @@
 <nav class="menu">
   {{ $currentPage := . }}
   {{ range (default .Site.Menus.main (index .Site.Menus ($.Scratch.Get "section"))) }}
-  <a href="{{ .URL }}">{{ .Name }}</a>
+  <a href="{{ .URL }}">{{ .Pre }} {{ .Name }} {{ .Post }}</a>
   {{ end }}
   {{ partial "menu_extra.html" . }}
 </nav>
