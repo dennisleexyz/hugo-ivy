@@ -46,7 +46,6 @@
     <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}"/>
     {{ end }}
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"/>
-    <link rel="stylesheet" href="/css/all.min.css">
   </head>
 
   {{- $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .RelPermalink) }}
