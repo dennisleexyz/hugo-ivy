@@ -1,33 +1,37 @@
-  <footer>
-  {{ partial "foot_custom.html" . }}
-  <hr>
-  <div class="copyright">
-    <p>
-      Copyright © {{ $1 := now -}}
-                  {{- with .Page.Date -}}
-                    {{- $1 = . -}}
-                  {{- else -}}
-                    {{- with .Lastmod -}}
-                      {{- $1 = . -}}
-                    {{- end -}}
-                  {{- end -}}
-{{- $2 := now -}}
-{{- with .Lastmod -}}
-  {{- $2 = . -}}
-{{- else -}}
-  {{- with .Page.Date -}}
-    {{- $2 = . -}}
-  {{- end -}}
-{{- end -}}
-{{- if ne ($1.Format "2006") ($2.Format "2006") -}}
-  {{- $1.Format "2006" -}}-
-{{- end -}}
-{{- $2.Format "2006" }} <a href="{{- .Site.BaseURL -}}">{{- .Site.Title -}}</a>
-    </p>
-    {{ .Site.Copyright | markdownify }}
-  </div>
-  </footer>
-  </article>
-  {{ template "_internal/google_analytics.html" . }}
+      <footer>
+        <hr>
+        {{ if .Section -}}
+        <nav class="post-nav">
+          <span class="nav-prev">{{ with .PrevInSection }}&larr; <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</span>
+          <span class="nav-next">{{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a> &rarr;{{ end }}</span>
+        </nav>
+        {{ end -}}
+        <div class="copyright">
+          {{ $1 := now -}}
+          {{- with .Page.Date -}}
+            {{- $1 = . -}}
+          {{- else -}}
+            {{- with .Lastmod -}}
+              {{- $1 = . -}}
+            {{- end -}}
+          {{- end -}}
+
+          {{- $2 := now -}}
+          {{- with .Lastmod -}}
+            {{- $2 = . -}}
+          {{- else -}}
+            {{- with .Page.Date -}}
+              {{- $2 = . -}}
+            {{- end -}}
+          {{- end -}}
+
+          <p>Copyright © {{ if ne ($1.Format "2006") ($2.Format "2006") -}}
+                           {{- $1.Format "2006" -}}-
+                         {{- end -}}
+          {{- $2.Format "2006" }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+          {{ .Site.Copyright | markdownify }}
+        </div>
+      </footer>
+    </article>
   </body>
 </html>

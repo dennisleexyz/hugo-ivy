@@ -1,7 +1,7 @@
-{{ if not .IsHome }}
-<h2>{{ .Title }}</h2>
-{{ with .Params.subtitle }}<p><span class="subtitle">{{ . }}</span></p>{{ end }}
-<p>{{ with .Params.author }}{{ . }}{{ end }}
-{{ if .Params.date }} {{ if .Params.author }} / {{ end }} {{ .Date.Format "2006-01-02" }}{{ end }}</p>
-<hr>
-{{ end }}
+{{- if not .IsHome -}}
+    <h2>{{ .Title }}</h2>
+        {{ with .Params.subtitle }}<p><span class="subtitle">{{ . }}</span></p>{{ end -}}
+        <p>{{ with .Params.author }}{{ . }}{{ end }}
+        {{- if .Params.date }} {{- if .Params.author }} / {{ end -}} {{ .Date.Format "2006-01-02" }}{{ end }}</p>
+        <hr>
+{{- end -}}
