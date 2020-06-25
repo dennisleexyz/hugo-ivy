@@ -10,19 +10,11 @@
           {{ $1 := now -}}
           {{- with .Page.Date -}}
             {{- $1 = . -}}
-          {{- else -}}
-            {{- with .Lastmod -}}
-              {{- $1 = . -}}
-            {{- end -}}
           {{- end -}}
 
           {{- $2 := now -}}
           {{- with .Lastmod -}}
             {{- $2 = . -}}
-          {{- else -}}
-            {{- with .Page.Date -}}
-              {{- $2 = . -}}
-            {{- end -}}
           {{- end -}}
 
           <p>Copyright © {{ if ne ($1.Format "2006") ($2.Format "2006") -}}
