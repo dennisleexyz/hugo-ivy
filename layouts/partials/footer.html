@@ -2,9 +2,8 @@
         <hr>
         {{ if .Section -}}
         <nav class="post-nav">
-          <span class="nav-prev">{{ with .PrevInSection }}← <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</span>
-          <br>
-          <span class="nav-next">{{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a> →{{ end }}</span>
+          <div class="nav-prev">{{ with .PrevInSection }}← <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</div>
+          <div class="nav-next">{{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }}</a> →{{ end }}</div>
         </nav>
         {{ end -}}
         <div class="copyright">
