@@ -54,6 +54,9 @@
 
       {{ partial "menu.html" . }}
       <hr>
+      {{ if (.Params.toc) -}}
+      {{ .TableOfContents -}}
+      {{ end }}
     </header>
 
     <article class="main">
